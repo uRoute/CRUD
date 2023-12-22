@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS workshop</title>
+</head>
+<body>
+   
+    <div class="bg-light p-3">
+        <form id="formmy">
+            <label for="name">Name:</label>
+            <input class="form-control mb-2" type="text" id="name" placeholder="Enter bookmark name ...">
+            <label for="url">URL:</label>
+            <input class="form-control" type="text" id="url" placeholder="Enter bookmark URL ...">
+            <button id="addBtn" onclick="add()" class="btn btn-primary w-100 my-3">Add</button>
+            <button id="updateBtn" onclick="applyUpdate(this)" class="btn btn-warning w-100 my-3 d-none">Update</button>
+        </form>
+        <input onkeyup="bookmarkSearch(this.value)" class="form-control w-25" type="text" placeholder="Search by bookmark name .....">
+        <div id="contentTable" class="my-3">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Visit</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody  id="bodyContent">
+                 
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
